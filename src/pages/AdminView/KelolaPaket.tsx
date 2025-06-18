@@ -88,7 +88,7 @@ const coursePackages: CoursePackage[] = [
   },
 ];
 
-export default function Dashboard() {
+export default function KelolaPaket() {
   const navigate = useNavigate();
 
   return (

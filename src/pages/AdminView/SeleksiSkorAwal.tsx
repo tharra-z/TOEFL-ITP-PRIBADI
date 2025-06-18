@@ -18,7 +18,7 @@ function formatTimestamp(dateStr: string): string {
   return `08:00 – ${formattedDate}`;
 }
 
-export default function Dashboard() {
+export default function SeleksiSkorAwal() {
   const navigate = useNavigate();
 
   return (

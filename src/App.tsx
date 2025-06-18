@@ -17,25 +17,11 @@ import AktivasiPaket from "./pages/AdminView/KelolaPaket/Aktivasi"; //Aktivasi P
 import DetailPengajuan from "./pages/AdminView/SeleksiSkorAwal/DetailPengajuan"; // Detail Pengajuan Seleksi
 
 
-export default function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/kelolaInstruktur" element={<KelolaInstruktur />} />
-        <Route path="/kelolaPaket" element={<KelolaPaket />} />
-        <Route path="/pantauPeserta" element={<PantauDaftarPeserta />} />
-        <Route path="/seleksiSkor" element={<SeleksiSkor />} />
-        <Route path="/riwayatTransaksi" element={<RiwayatTransaksi />} />
-        <Route path="/notifikasiAdmin" element={<NotifikasiAdmin />} />
-        <Route path="/profilSaya" element={<ProfilSaya />} />
-        <Route path="/UbahKetersediaan" element={<UbahKetersediaan />} /> {/* Ubah Ketersediaan Kelola Instruktur */}
-        <Route path="/tambahInstruktur" element={<TambahInstruktur />} /> {/* Tambah Kelola Instruktur */}
-        <Route path="/tambahPaket" element={<TambahPaket />} /> {/* Tambah Kelola Paket */}
-        <Route path="/ubahDetail" element={<UbahDetail />} /> {/* Ubah Detail Paket Kursus */}
-        <Route path="/aktivasi" element={<AktivasiPaket />} /> {/* Aktivasi Paket */}
-        <Route path="/detailPengajuan" element={<DetailPengajuan />} /> {/* Detail Pengajuan Seleksi */}
-      </Routes>
-    </Router>
-  );
+// src/App.tsx
+import AppRouter from "./routes/AppRouter";
+
+function App() {
+  return <AppRouter />;
 }
+
+export default App;

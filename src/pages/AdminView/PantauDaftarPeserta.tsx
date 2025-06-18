@@ -5,7 +5,7 @@ import { participants } from "../../assets/data/pantauDaftarPeserta"; //data dum
 import Search from "../../assets/icons/search.png";
 
 
-export default function Dashboard() {
+export default function PantauDaftarPeserta() {
   return (
     <Layout
       title="Pantau Daftar Peserta"

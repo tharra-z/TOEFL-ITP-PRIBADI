@@ -1,37 +1,41 @@
-// src/layouts/AuthLayout.tsx
-import React from 'react';
+import React from "react";
 
 // Ganti dengan path logo Telkom University Anda di folder public
-const logoUrl = 'Logo-LAC-TELU.png'; 
+const logoUrl = "Logo.png";
 
 type AuthLayoutProps = {
   children: React.ReactNode;
+  title?: string; // optional
 };
 
-const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
+const AuthLayout: React.FC<AuthLayoutProps> = ({
+  children,
+  title = "Selamat datang di LMS LaC TOEFL ITP",
+}) => {
   return (
     <div className="min-h-screen flex">
-      {/* Kolom Kiri (Konten Form) */}
-      <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
-        <div className="mx-auto w-full max-w-sm lg:w-96">
-          {/* Bagian Header Form */}
-          <div>
-            <img className="h-12 w-auto" src={logoUrl} alt="Telkom University" />
-            <p className="mt-6 text-sm text-gray-600">
-              Selamat datang di LMS LaC TCeL ITP
+      {/* Kolom Kiri (50%) */}
+      <div className="w-1/2 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-20 xl:px-24 bg-white">
+        <div className="mx-auto w-full max-w-sm">
+          {/* Header Form */}
+          <div className="flex flex-col items-center">
+            <img
+              className="h-32 w-auto"
+              src={logoUrl}
+              alt="Telkom University"
+            />
+            <p className="text-sm font-bold text-center text-black">
+              {title}
             </p>
           </div>
-
-          {/* Children akan menjadi isi form (login atau lupa password) */}
-          <div className="mt-8">
-            {children}
-          </div>
+          {/* Isi form */}
+          <div >{children}</div>
         </div>
       </div>
 
-      {/* Kolom Kanan (Panel Warna) */}
-      <div className="hidden lg:block relative w-0 flex-1 bg-[#A41D23]">
-        {/* Anda bisa menambahkan gambar atau elemen dekoratif di sini jika perlu */}
+      {/* Kolom Kanan (50%) */}
+      <div className="w-1/2 bg-[#A41D23] hidden lg:flex items-center justify-center">
+        {/* Tambahkan elemen dekoratif di sini jika diperlukan */}
       </div>
     </div>
   );

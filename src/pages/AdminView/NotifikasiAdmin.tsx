@@ -3,7 +3,7 @@ import Layout from "../../layouts/AdminView";
 import { notifications as data } from "../../assets/data/notifikasi";
 import { Bell } from "lucide-react";
 
-export default function Dashboard() {
+export default function NotifikasiAdmin() {
   // filter terbaca atau belum terbaca
   const [filter, setFilter] = useState<"Semua" | "Baca" | "Belum Terbaca">(
     "Semua"

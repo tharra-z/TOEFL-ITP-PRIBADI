@@ -17,7 +17,7 @@ function formatTimestamp(dateStr: string): string {
   });
   return `08:00 – ${formattedDate}`;
 }
-export default function Dashboard() {
+export default function RiwayatTransaksi() {
   return (
     <Layout
       title="Riwayat Transaksi Peserta Kursus"

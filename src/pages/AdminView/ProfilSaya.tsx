@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Layout from "../../layouts/AdminView";
 
-export default function Dashboard() {
+export default function ProfilSaya() {
   const [isEditMode, setIsEditMode] = useState(false);
   const [formData, setFormData] = useState({
     nama: "",
@@ -11,13 +11,13 @@ export default function Dashboard() {
   });
 
   const [photo, setPhoto] = useState(null);
-  const [photoPreview, setPhotoPreview] = useState(null);
+  const [photoPreview, setPhotoPreview] = useState<any | null>(null);
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handlePhotoChange = (e) => {
+  const handlePhotoChange = (e:any) => {
     const file = e.target.files[0];
     if (file) {
       setPhoto(file);

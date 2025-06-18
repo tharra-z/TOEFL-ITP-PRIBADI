@@ -1,7 +1,7 @@
 import Layout from "../../../layouts/AdminView";
 import StatusToggle from "../../../components/utils/StatusToggle";
 
-export default function Aktivasi() {
+export default function AktivasiPaket() {
   return (
     <Layout
       title="Atur Aktivasi Paket Kursus"

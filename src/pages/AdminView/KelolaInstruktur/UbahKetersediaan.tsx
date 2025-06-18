@@ -6,7 +6,7 @@ import FotoProfile from "../../../assets/image/foto.png";
 import { ChevronDown } from "lucide-react";
 
 
-export default function Dashboard() {
+export default function UbahKetersediaan() {
 
   return (
     <Layout

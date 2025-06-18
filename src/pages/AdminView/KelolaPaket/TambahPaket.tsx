@@ -1,6 +1,6 @@
 import Layout from "../../../layouts/AdminView";
 
-export default function Dashboard() {
+export default function TambahPaket() {
   return (
     <Layout
       title="Tambah Paket Kursus"

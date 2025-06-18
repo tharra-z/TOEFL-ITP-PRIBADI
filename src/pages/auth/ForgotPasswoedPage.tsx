@@ -1,15 +1,18 @@
 // src/pages/auth/ForgotPasswordPage.tsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import AuthLayout from '../../layouts/AuthLayout';
 
 const ForgotPasswordPage: React.FC = () => {
+
+  const navigate = useNavigate()
+
   return (
     <AuthLayout>
       <div>
         <h2 className="text-3xl font-bold tracking-tight text-gray-900">Lupa Password</h2>
         <p className="mt-2 text-sm text-gray-600">
-          Kami akan mengirimkan tautan untuk mengatur ulang kata sandi anda
+          Silakan ikuti langkah berikut untuk melakukan reset password akun Anda.
         </p>
       </div>
 
@@ -31,23 +34,15 @@ const ForgotPasswordPage: React.FC = () => {
         </div>
 
         <div>
-          <button
+          <button onClick={() => navigate('/reset-password')}
             type="submit"
             className="flex w-full justify-center rounded-md border border-transparent bg-[#E5A923] py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2"
           >
-            Kirim tautan
+            Verifikasi
           </button>
         </div>
       </form>
 
-      <div className="mt-6">
-        <p className="text-center text-sm text-gray-600">
-          Kembali ke{' '}
-          <Link to="/login" className="font-medium text-red-700 hover:text-red-600">
-            Login
-          </Link>
-        </p>
-      </div>
     </AuthLayout>
   );
 };
